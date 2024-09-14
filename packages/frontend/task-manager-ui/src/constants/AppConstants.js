@@ -1,0 +1,1 @@
+export const URL_STATIC_CONTENT = '../content/content.json';
