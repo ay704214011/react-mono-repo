@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Item component tests should render correctly 1`] = `
+.c0 .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 100px 100px;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+}
+
+.c0 .grid-item-full-width {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.c0 .form-contanier {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(2,1fr) 2fr;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+}
+
+.c0 .form-contanier input,
+.c0 .form-contanier textarea {
+  width: 250px;
+  height: 30px;
+  border: solid 2px grey;
+}
+
+.c0 .form-item {
+  text-align: left;
+}
+
+.c1 {
+  height: 35px;
+  width: 150px;
+  border: solid 1px grey;
+}
+
+.c2 {
+  height: 35px;
+  width: 100px;
+  border: solid 1px grey;
+  cursor: pointer;
+  background-color: #82c823;
+  color: #fff;
+}
+
+.c3 {
+  height: 35px;
+  width: 100px;
+  border: solid 1px grey;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <p>
+      Shopping List
+    </p>
+    <div
+      class="grid-container"
+    >
+      <div
+        class="grid-item"
+      >
+        <label>
+          Item
+          :
+        </label>
+        <input
+          class="c1 ml-8"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        class="grid-item"
+      >
+        <button
+          class="c2 ml-8"
+          data-testid="btn-add-item"
+        >
+          Add item
+        </button>
+      </div>
+      <div
+        class="grid-item"
+      >
+        <button
+          class="c3 ml-8"
+        >
+          Reset
+        </button>
+      </div>
+      <div
+        class="grid-item grid-item-full-width"
+      />
+    </div>
+    <div
+      class="form-contanier"
+    >
+      <div
+        class="form-item"
+      >
+        <label
+          for=""
+        >
+          Name
+        </label>
+      </div>
+      <div
+        class="form-item"
+      >
+        <input
+          class="ml-8"
+          id="name"
+          type="text"
+        />
+      </div>
+      <div
+        class="form-item"
+      >
+        <label
+          for=""
+        >
+          Category
+        </label>
+      </div>
+      <div
+        class="form-item"
+      >
+        <input
+          class="ml-8"
+          id="category"
+          type="text"
+        />
+      </div>
+      <div
+        class="form-item"
+      >
+        <label
+          for=""
+        >
+          Description
+        </label>
+      </div>
+      <div
+        class="form-item"
+      >
+        <textarea
+          class="ml-8"
+          cols="50"
+          id="description"
+          rows="30"
+        />
+      </div>
+      <div
+        class="form-item"
+      >
+        <button
+          class="c2 ml-8"
+        >
+          Add item
+        </button>
+      </div>
+      <div
+        class="form-item"
+      >
+        <button
+          class="c3 ml-8"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

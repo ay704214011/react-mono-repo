@@ -1,11 +1,17 @@
-import { useEffect, useReducer } from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useReducer, Suspense } from 'react';
 import combinedState, { storeReducer } from './store/store';
 import AddItem from './components/AddItem/AddItem';
 import { StoreContext } from './store/store';
 import Loader from './components/Loader/Loader';
 import { fetchStaticLabels } from './services/services';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import './App.scss';
+
+const ServiceWorker = React.lazy(() => import('./components/ServiceWorker/ServiceWorker'));
+
+const NotFound = () => {
+  return <h1>'Page not found...'</h1>
+};
 
 function App() {
   const [state, dispatch] = useReducer(storeReducer, combinedState);
@@ -13,10 +19,9 @@ function App() {
     state, dispatch
   };
   console.log('state ', state);
-  const { content: { isFetchingLabels, labels } } = state;
+  const { content: { isFetchingLabels } } = state;
 
   useEffect(() => {
-    console.log('fetch static labels');
     fetchStaticLabels(dispatch);
   }, []);
 
@@ -28,11 +33,23 @@ function App() {
     <StoreContext.Provider value={context}>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            {labels.title}
-          </p>
-          <AddItem />
+          <Routes>
+            <Route index element={
+              <Suspense fallback={<Loader />}>
+                <AddItem />
+              </Suspense>
+            }/>
+            <Route path="serviceWorker" element={
+              <Suspense fallback={<Loader />}>
+                <ServiceWorker />
+              </Suspense>
+            }/>
+            <Route path="*" element={
+              <Suspense>
+                <NotFound />
+              </Suspense>
+            }/>
+          </Routes>
         </header>
       </div>
     </StoreContext.Provider>

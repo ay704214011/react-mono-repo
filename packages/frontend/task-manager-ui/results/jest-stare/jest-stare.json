@@ -1,0 +1,11 @@
+{
+  "resultDir": "results/jest-stare/",
+  "reportHeadline": "MFE Shopping list",
+  "reportTitle": "Unit Test Report",
+  "coverageLink": "../coverage/lcov-report/index.html",
+  "jestStareConfigJson": "jest-stare.json",
+  "jestGlobalConfigJson": "globalStuff.json",
+  "additionalResultsProcessors": [],
+  "resultHtml": "index.html",
+  "resultJson": "jest-results.json"
+}

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktask_manager_ui=self.webpackChunktask_manager_ui||[]).push([["src_components_ServiceWorker_ServiceWorker_js"],{"./src/components/ServiceWorker/ServiceWorker.js":(e,r,s)=>{s.r(r),s.d(r,{ServiceWorker:()=>n,default:()=>o});var c=s("./node_modules/react/jsx-runtime.js");const n=()=>(0,c.jsx)("h1",{children:"Service worker page rendered..."}),o=n}}]);
+//# sourceMappingURL=src_components_ServiceWorker_ServiceWorker_js.1fc5b442.chunk.js.map

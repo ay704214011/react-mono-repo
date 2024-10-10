@@ -5,6 +5,11 @@ export const ADD_ITEM = 'ITEMS/ADD_ITEM';
 export const ADD_ITEMS = 'ITEMS/ADD_ITEMS';
 export const DELETE_ITEM = 'ITEMS/DELETE_ITEM';
 
+//Get items actions
+export const FETCH_ITEMS = 'ITEMS/FETCH_ITEMS';
+export const FETCH_ITEMS_SUCCESS = 'ITEMS/FETCH_ITEMS_SUCCESS';
+export const FETCH_ITEMS_FAILURE = 'ITEMS/FETCH_ITEMS_FAILURE';
+
 export const addItem = (item) => ({
   type: ADD_ITEM,
   data: item
@@ -31,4 +36,17 @@ export const fetchLabelsSuccess = (data) => ({
 
 export const fetchLabelsFailure = () => ({
   type: FETCH_LABELS_FAILURE
+});
+
+export const fetchItems = () => ({
+  type: FETCH_ITEMS
+});
+
+export const fetchItemsSuccess = (data) => ({
+  type: FETCH_ITEMS_SUCCESS,
+  data
+});
+
+export const fetchItemsFailure = () => ({
+  type: FETCH_ITEMS_FAILURE
 });

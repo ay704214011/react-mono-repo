@@ -1,3 +1,5 @@
+@import-normalize; /* bring in normalize.css styles */
+
 .App {
   text-align: center;
 }
@@ -39,4 +41,15 @@
 
 .text-center {
   text-align: center;
+}
+
+
+/** Common classes **/
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.mr-8 {
+  margin-right: 8px;
 }

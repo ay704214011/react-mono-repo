@@ -1,13 +1,23 @@
+import { useEffect } from 'react';
 import { deleteItem } from '../../store/actions';
+import { fetchItemList } from '../../services/services';
 
 const ItemList = (props) => {
     const { items, dispatch, state } = props;
     const { content: { labels } } = state;
+
+    useEffect(() => {
+      fetchItemList(dispatch);
+      //console.log('State in Item List ', state);
+    }, [dispatch]);
+
+    if (!items.length) {
+      return '';
+    }
     return (
         <>
         <p>{labels.itemList}:</p>
-          {
-            <ul>
+          <ul>
                 {
                     items.map((item) => {
                         return (
@@ -16,12 +26,11 @@ const ItemList = (props) => {
                           <a onClick={(e) => {
                             e.preventDefault()
                             dispatch(deleteItem(item.id))
-                          }} href="javascript:void(0);">Delete</a>
+                          }} href="VOID();">Delete</a>
                         </li>);
                     })
                 }
             </ul>
-          }
         </>
    );
 };

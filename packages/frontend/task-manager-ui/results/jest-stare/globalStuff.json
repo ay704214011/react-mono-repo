@@ -1,0 +1,80 @@
+{
+  "bail": 0,
+  "changedFilesWithAncestor": false,
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "src/components/**/*.{js, jsx}"
+  ],
+  "coverageDirectory": "E:\\Study\\react-mono-repo\\packages\\frontend\\task-manager-ui\\results\\coverage",
+  "coverageProvider": "babel",
+  "coverageReporters": [
+    "json",
+    "text",
+    "lcov",
+    "clover"
+  ],
+  "detectLeaks": false,
+  "detectOpenHandles": false,
+  "errorOnDeprecated": false,
+  "expand": false,
+  "findRelatedTests": false,
+  "forceExit": false,
+  "json": false,
+  "lastCommit": false,
+  "listTests": false,
+  "logHeapUsage": false,
+  "maxConcurrency": 5,
+  "maxWorkers": 2,
+  "noStackTrace": false,
+  "nonFlagArgs": [
+    "AddItem.test.js"
+  ],
+  "notify": false,
+  "notifyMode": "failure-change",
+  "onlyChanged": false,
+  "onlyFailures": false,
+  "passWithNoTests": true,
+  "projects": [],
+  "reporters": [
+    [
+      "default",
+      {}
+    ],
+    [
+      "E:\\Study\\react-mono-repo\\packages\\frontend\\task-manager-ui\\node_modules\\jest-stare\\lib\\index.js",
+      {
+        "resultDir": "results/jest-stare/",
+        "reportHeadline": "MFE Shopping list",
+        "reportTitle": "Unit Test Report",
+        "coverageLink": "../coverage/lcov-report/index.html",
+        "jestStareConfigJson": "jest-stare.json",
+        "jestGlobalConfigJson": "globalStuff.json",
+        "additionalResultsProcessors": [],
+        "resultHtml": "index.html",
+        "resultJson": "jest-results.json"
+      }
+    ]
+  ],
+  "rootDir": "E:\\Study\\react-mono-repo\\packages\\frontend\\task-manager-ui",
+  "runTestsByPath": false,
+  "skipFilter": false,
+  "testFailureExitCode": 1,
+  "testPathPattern": "AddItem.test.js",
+  "testSequencer": "E:\\Study\\react-mono-repo\\packages\\frontend\\task-manager-ui\\node_modules\\react-scripts\\node_modules\\@jest\\test-sequencer\\build\\index.js",
+  "updateSnapshot": "new",
+  "useStderr": false,
+  "verbose": true,
+  "watch": true,
+  "watchAll": false,
+  "watchPlugins": [
+    {
+      "config": {},
+      "path": "E:\\Study\\react-mono-repo\\packages\\frontend\\task-manager-ui\\node_modules\\react-scripts\\node_modules\\jest-watch-typeahead\\build\\file_name_plugin\\plugin.js"
+    },
+    {
+      "config": {},
+      "path": "E:\\Study\\react-mono-repo\\packages\\frontend\\task-manager-ui\\node_modules\\react-scripts\\node_modules\\jest-watch-typeahead\\build\\test_name_plugin\\plugin.js"
+    }
+  ],
+  "watchman": true
+}

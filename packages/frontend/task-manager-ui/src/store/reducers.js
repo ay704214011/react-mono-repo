@@ -1,4 +1,4 @@
-import { ADD_ITEM, ADD_ITEMS, DELETE_ITEM, FETCH_LABELS, FETCH_LABELS_SUCCESS, FETCH_LABELS_FAILURE } from './actions';
+import { ADD_ITEM, ADD_ITEMS, DELETE_ITEM, FETCH_LABELS, FETCH_LABELS_SUCCESS, FETCH_LABELS_FAILURE, FETCH_ITEMS, FETCH_ITEMS_SUCCESS, FETCH_ITEMS_FAILURE } from './actions';
 
 export const itemsReducer = (state, action) => {
    const { data } = action;
@@ -25,7 +25,27 @@ export const itemsReducer = (state, action) => {
         return {
             ...state,
             itemList: updatedItems
-        }
+        };
+      }
+      case FETCH_ITEMS: {
+         return {
+            ...state,
+            isFetchingItems: true
+         };
+      }
+      case FETCH_ITEMS_SUCCESS: {
+         return {
+            ...state,
+            isFetchingItems: false,
+            fetchedItems: data
+         };
+      }
+      case FETCH_ITEMS_FAILURE: {
+         return {
+            ...state,
+            isFetchingItems: false,
+            isFetchItemsError: true
+         };
       }
       default:
         return {
@@ -35,6 +55,7 @@ export const itemsReducer = (state, action) => {
 };
 
 export const contentReducer = (state, action) => {
+   console.log('state 1', state);
    switch (action.type)  {
        case FETCH_LABELS:
          return {
@@ -57,6 +78,6 @@ export const contentReducer = (state, action) => {
             ...state
          };
    }
-}
+};
 
 export default itemsReducer;
