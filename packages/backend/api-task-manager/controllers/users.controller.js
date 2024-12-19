@@ -2,7 +2,7 @@ const sendResponse = require("../utils/sendResponse");
 const { fetchUsers } = require('../services/userService');
 const sendError = require("../utils/sendError");
 
-const usersController = async (req, res, next) => {
+const getUsers = async (req, res, next) => {
     try {
         const data = await fetchUsers();
         sendResponse(res, 200, data);
@@ -14,5 +14,5 @@ const usersController = async (req, res, next) => {
 };
 
 module.exports = {
-    usersController
+    getUsers
 };

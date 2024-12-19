@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Deployment started on `Date`
+  build:
+    commands:
+      - echo Build step started
+      - cd packages/frontend/task-manager-ui
+      - npm install
+      - npm run build
+      # - aws cloudfront create-invalidation --distribution-id XXXXXXXX --paths "/*"
+  post_build:
+    commands:
+      - echo Deployment completed on `Date`
+      - echo Syncing S3 Content
+      - aws s3 sync ./results/build s3://taskmanager.xyz
+        

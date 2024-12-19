@@ -6,6 +6,8 @@ import Loader from './components/Loader/Loader';
 import { fetchStaticLabels } from './services/services';
 import { Routes, Route } from 'react-router-dom';
 import './App.scss';
+import ItemList from './components/ItemList/ItemList';
+import ErrorBoundary from './ErrorBoundary';
 
 const ServiceWorker = React.lazy(() => import('./components/ServiceWorker/ServiceWorker'));
 
@@ -42,6 +44,13 @@ function App() {
             <Route path="serviceWorker" element={
               <Suspense fallback={<Loader />}>
                 <ServiceWorker />
+              </Suspense>
+            }/>
+            <Route path="itemList" element={
+              <Suspense fallback={<Loader />}>
+                <ErrorBoundary>
+                  <ItemList />
+                </ErrorBoundary>
               </Suspense>
             }/>
             <Route path="*" element={

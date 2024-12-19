@@ -1,0 +1,20 @@
+table {
+    border: solid 1px grey;
+
+    tr {
+        border: solid 1px grey;
+    }
+
+    td, th {
+        border: solid 1px grey;
+        text-align: left;
+        font-size:15px;
+        padding: 5px;
+    }
+
+    .sort-container {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

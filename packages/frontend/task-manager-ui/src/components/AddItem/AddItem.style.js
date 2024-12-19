@@ -28,4 +28,12 @@ export default css`
     .form-item {
        text-align: left;
     }
+    .error {
+      color: red;
+      border: solid 1px red;
+    }
+    .success {
+      color: green;
+      border: solid 1px green;
+    }
 `;
