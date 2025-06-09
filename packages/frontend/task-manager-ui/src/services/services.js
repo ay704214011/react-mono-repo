@@ -39,3 +39,5 @@ export const fetchItemList = async (dispatch) => {
         dispatch(fetchItemsFailure());
     }
 };
+
+/***** Fetch Item details code will go here****/
